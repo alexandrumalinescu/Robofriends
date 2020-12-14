@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+function App(props)  {
+  const {name, email,id} = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5 '>
+      <img src={`https://robohash.org/${id}?200x200`} alt='robots' /> 
+      <div>
+        <h2>{name}</h2>
+        <p>{email}</p>
+      </div>
     </div>
   );
 }
